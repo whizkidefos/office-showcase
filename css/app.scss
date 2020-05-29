@@ -1,0 +1,192 @@
+$color-primary: #7382B1;
+$white: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.cta {
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    color: $white;
+    padding-bottom: 5px;
+    position: relative;
+
+    &::after {
+        content: '\2192';
+        margin-left: 10px;
+        transition: 1s;
+    }
+
+    &:hover::after {
+        margin-left: 15px;
+    }
+}
+
+#fp-nav ul li a span {
+    background: $white;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 5;
+}
+
+aside {
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+    z-index: 3;
+    
+    a {
+        color: $white;
+        padding: 0 1em;
+        transition: 0.7s;
+
+        &:hover {
+            font-size: 1.1em;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+
+        li {
+            margin: 0 1rem;
+        }
+        a {
+            color: $white;
+        }
+    }
+    .logo {
+        color: $white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $color-primary;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    transition: 1s;
+    opacity: 0;
+
+    a {
+        color: $white;
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+}
+
+// main {
+//     background: url(../assets/photo-of-ceiling-lights-1928739.jpg) no-repeat top / cover;
+//     position: relative;
+//     // z-index: -2;
+// }
+
+.backgrounds {
+    // background: url(../assets/photo-of-ceiling-lights-1928739.jpg) no-repeat top / cover;
+    position: relative;
+    position: fixed;
+    z-index: -1;
+
+    .left {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: palevioletred;
+        width: 30%;
+        height: 100vh;
+        opacity: 0.8;
+    }
+    .right {
+        position: fixed;
+        left: 30%;
+        top: 0;
+        background-color: $color-primary;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.8;
+    }
+}
+
+section.section {
+    position: relative;
+    z-index: 3;
+}
+
+article {
+    color: $white;
+
+    h1 {
+        font-size: 5em;
+        line-height: 1em;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-weight: 400;
+
+        span {
+            font-size: .5em;
+        }
+    }
+
+    p {
+        font-size: 1.2em;
+        letter-spacing: .3em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 1em;
+    left: 4em;
+    color: $white;
+}
